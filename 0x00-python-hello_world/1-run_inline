@@ -1,0 +1,3 @@
+#!/bin/bash
+export PYCODE = 'print("best school: {}".format(88+10))'
+python $PYCODE
