@@ -8,7 +8,7 @@ int check_cycle(listint_t *list)
 	if(!list)
 	return (0);
 	
-	while(rapido->next->next)
+	while(rapido -> next && rapido->next->next)
 	{
 		rapido = rapido -> next -> next;
 		lento = lento -> next;
