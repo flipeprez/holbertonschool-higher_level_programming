@@ -5,7 +5,7 @@ if number >= 0:
     helper = number % 10
 else:
     helper = -number % 10 * -1
-print("Last digit of {:d} and is {:d}".format(number, helper), end="")
+print("Last digit of {:d} and is {:d} ".format(number, helper), end="")
 if helper > 5:
     print("and is greater than 5".format(helper, number))
 elif helper == 0:
