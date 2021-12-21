@@ -7,8 +7,8 @@ else:
     helper = -number % 10 * -1
 print("Last digit of {:d} is {:d}".format(number, helper), end=" ")
 if helper > 5:
-    print("and is greater than 5".format(helper, number))
+    print("and is greater than 5")
 elif helper < 6 and helper != 0:
-    print("and is less than 6 and not 0".format(helper, number))
+    print("and is less than 6 and not 0")
 else:
     print("and is 0")
