@@ -15,7 +15,7 @@ def argument():
 
     for index, arg in enumerate(argv):
         if (index > 0):
-            print("{} : {}".format(index, arg))
+            print("{}: {}".format(index, arg))
 
 
 if __name__ == "__main__":
