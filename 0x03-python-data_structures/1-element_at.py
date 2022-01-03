@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
-    for idx in my_list:
-        if idx < 0:
+    for i in my_list:
+        if i < 0:
             return (None)
-        if idx > my_list.append(idx):
+        if i > my_list.append(idx):
             return (None)
 
 
