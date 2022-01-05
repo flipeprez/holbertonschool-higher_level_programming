@@ -7,4 +7,3 @@ def complex_delete(a_dictionary, value):
     for i in ks:
         del a_dictionary[i]
     return a_dictionary
-
