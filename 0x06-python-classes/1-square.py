@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-'''file coment'''
-
-
 class Square:
-'''define class'''
-
-
     def __init__(self, size):
+        ''' 
+            init of instance
+        '''
         self.__size = size
