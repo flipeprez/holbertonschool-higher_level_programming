@@ -2,4 +2,5 @@
 class Square:
 
     '''square class'''
+    # pass
     pass
