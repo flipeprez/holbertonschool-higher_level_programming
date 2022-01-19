@@ -3,6 +3,7 @@
 
 
 class Square:
+    '''class name'''
     def __init__(self, size):
-        # init of instance
+        '''init of instance'''
         self.__size = size
