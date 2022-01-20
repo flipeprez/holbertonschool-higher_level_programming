@@ -6,12 +6,8 @@ class Square:
     '''lala'''
     def __init__(self, size=0, position=(0, 0)):
         '''lala'''
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -36,11 +32,12 @@ class Square:
         '''lalal'''
         if self.__size == 0:
             print()
-        elif self.__size > 0:
-            for a in range(0, self.__size):
-                for h in range(0, self.__size):
-                    print("#", end="")
-                print()
+        for o in range(self.__size):
+            for g in range(self.__position[0]):
+                print(" ", end="")
+            for t in range(self.__size):
+                print("#", end="")
+            print()
 
     @property
     def position(self):
