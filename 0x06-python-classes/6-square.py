@@ -32,6 +32,8 @@ class Square:
         '''lalal'''
         if self.__size == 0:
             print()
+        for i in range(self.__position[1]):
+            print()
         for o in range(self.__size):
             for g in range(self.__position[0]):
                 print(" ", end="")
