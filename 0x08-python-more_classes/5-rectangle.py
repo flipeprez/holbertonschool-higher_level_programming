@@ -61,11 +61,12 @@ class Rectangle:
             if g is not self.height - 1:
                 rec += "\n"
         return rec
-    
+
     def __repr__(self):
         '''def repr'''
         return (type(self).__name__ + "(" + str(self.__width) + "," +
                 str(self.__height) + ")")
+
     def __del__(self):
         '''def del'''
         print("Bye rectangle...")
