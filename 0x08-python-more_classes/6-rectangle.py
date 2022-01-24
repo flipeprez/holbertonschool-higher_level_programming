@@ -5,7 +5,7 @@
 class Rectangle:
     '''define rectangle class'''
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         '''def func'''
         self.height = height
@@ -22,7 +22,7 @@ class Rectangle:
     def width(self, value):
         '''define width setter'''
         if type(value) is not int:
-            raise TypeError("width must be a integer")
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         else:
@@ -62,13 +62,15 @@ class Rectangle:
         for g in range(self.height):
             for t in range(self.width):
                 rec += "#"
-            rec += "\n"
+            if g is not self.height - 1:
+                rec += "\n"
         return rec
-    
+
     def __repr__(self):
         '''def repr'''
         return (type(self).__name__ + "(" + str(self.__width) + "," +
                 str(self.__height) + ")")
+
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
