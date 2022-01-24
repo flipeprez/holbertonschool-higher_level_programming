@@ -17,10 +17,10 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
-        self.height = height
-        self.width = width
-        number_of_instance = 0
-        Rectangle.number_of_instances += 1
+        else:
+            self.height = height
+            self.width = width
+            Rectangle.number_of_instances += 1
 
     @property
     def width(self):
