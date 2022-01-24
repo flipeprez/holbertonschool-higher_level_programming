@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''class comments'''
+
+
 class Rectangle:
     '''define rectangle class'''
     number_of_instances = 0

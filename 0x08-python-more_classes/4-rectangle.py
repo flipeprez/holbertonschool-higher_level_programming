@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''class comment'''
+
+
 class Rectangle:
     '''define rectangle class'''
     def __init__(self, width=0, height=0):
