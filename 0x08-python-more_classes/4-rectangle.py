@@ -18,7 +18,7 @@ class Rectangle:
     def width(self, value):
         '''define width setter'''
         if type(value) is not int:
-            raise TypeError("width must be a integer")
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         else:
@@ -61,7 +61,7 @@ class Rectangle:
             if g is not self.height - 1:
                 rec += "\n"
         return rec
-    
+
     def __repr__(self):
         '''def repr'''
         return (type(self).__name__ + "(" + str(self.__width) + "," +
