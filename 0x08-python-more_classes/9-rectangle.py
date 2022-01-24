@@ -64,9 +64,9 @@ class Rectangle:
 
     def __str__(self):
         '''define string to print'''
-        rec = ""
         if self.width == 0 or self.height == 0:
-            return rec
+            return ""
+        rec = ""
         for g in range(self.height):
             for t in range(self.width):
                 rec += str(self.print_symbol)
