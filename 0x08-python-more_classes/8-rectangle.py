@@ -6,7 +6,7 @@ class Rectangle:
     '''define rectangle class'''
     number_of_instances = 0
     print_symbol = "#"
-    
+
     def __init__(self, width=0, height=0):
         '''def func'''
         self.height = height
@@ -70,11 +70,12 @@ class Rectangle:
         '''define repr'''
         return (type(self).__name__ + "(" + str(self.__width) + "," +
                 str(self.__height) + ")")
+
     def __del__(self):
         '''def del'''
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-    
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         ''' define static method'''
