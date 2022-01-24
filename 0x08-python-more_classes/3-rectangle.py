@@ -59,5 +59,5 @@ class Rectangle:
             for t in range(self.width):
                 rec += "#"
             if g is not self.height - 1:
-            rec += "\n"
+                rec += "\n"
         return rec
