@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-'''class comment'''
+"""module doc"""
 
 
 class Rectangle:
-    '''define rectangle class'''
+    """class doc"""
+
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        '''def func'''
-        if type(height) is not int:
-            raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be >= 0")
-        if type(width) is not int:
+        """init doc"""
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
-        if width < 0:
+        elif width < 0:
             raise ValueError("width must be >= 0")
+        elif not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        elif height < 0:
+            raise ValueError("height must be >= 0")
         else:
             self.height = height
             self.width = width
@@ -24,79 +25,77 @@ class Rectangle:
 
     @property
     def width(self):
-        '''define property'''
+        """width getter doc"""
         return self.__width
-
-    @width.setter
-    def width(self, value):
-        '''define width setter'''
-        if type(value) is not int:
-            raise TypeError("width must be a integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
 
     @property
     def height(self):
-        '''define prperty'''
+        """height getter doc"""
         return self.__height
 
+    @width.setter
+    def width(self, width):
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        elif width < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = width
+
     @height.setter
-    def height(self, value):
-        '''define height setter'''
-        if type(value) is not int:
+    def height(self, height):
+        if not isinstance(height, int):
             raise TypeError("height must be an integer")
-        if value < 0:
+        elif height < 0:
             raise ValueError("height must be >= 0")
         else:
-            self.__height = value
+            self.__height = height
 
     def area(self):
-        '''define area self'''
-        return self.width * self.height
+        """area doc"""
+        return self.__height * self.__width
 
     def perimeter(self):
-        '''define perimeter'''
-        if self.width == 0 or self.height == 0:
+        """perimeter doc"""
+        if self.__height == 0 or self.__width == 0:
             return 0
-        return (self.width + self.height) * 2
+        return (self.__height + self.__width) * 2
 
     def __str__(self):
-        '''define string to print'''
-        if self.width == 0 or self.height == 0:
+        """str doc"""
+        if self.__width == 0 or self.__height == 0:
             return ""
-        rec = ""
-        for g in range(self.height):
-            for t in range(self.width):
-                rec += str(self.print_symbol)
-            if g is not self.height - 1:
-                rec += "\n"
-        return rec
+        string = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                string += str(self.print_symbol)
+            if i is not self.__height - 1:
+                string += "\n"
+        return string
 
     def __repr__(self):
-        '''define repr'''
-        return (type(self).__name__ + "(" + str(self.__width) + "," +
+        """repr doc"""
+        return (type(self).__name__ + "(" + str(self.__width) + ", " +
                 str(self.__height) + ")")
 
     def __del__(self):
-        '''def del'''
+        """del doc"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        ''' define static method'''
+        """bigger_or_equal doc"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() < rect_2.area():
+        if Rectangle.area(rect_2) > Rectangle.area(rect_1):
             return rect_2
-        elif rect_1.area() >= rect_2.area():
+        else:
             return rect_1
 
     @classmethod
     def square(cls, size=0):
-        '''square method'''
+        """square doc"""
         return cls(size, size)
