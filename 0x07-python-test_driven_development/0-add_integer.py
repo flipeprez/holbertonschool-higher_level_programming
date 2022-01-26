@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''comment'''
+
+
 def add_integer(a, b=98):
     '''add integer function'''
     if not isinstance(a, int) and not isinstance(a, float):
