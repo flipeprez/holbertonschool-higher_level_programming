@@ -24,7 +24,7 @@ def matrix_divided(matrix, div):
         if not isinstance(fila, list):
             raise TypeError(error_list)
         if largo != len(fila):
-            raise TypeError("Each row must have the same size")
+            raise TypeError("Each row of the matrix must have the same size")
         for l in fila:
             if not isinstance(l, (int, float)):
                 raise TypeError(error_list)
