@@ -4,6 +4,12 @@ checking for both values be float
 >>> add_integer(2.0, 2.0)
 4
 
+check case + string
+>>> add_integer(1, "2")
+Traceback (most recent call last)
+    ...
+TypeError: b must be an integer
+
 check integer float
 >>> add_integer(1, 2.0)
 
