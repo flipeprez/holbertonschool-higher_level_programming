@@ -1,0 +1,48 @@
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text="test question mark? test exclamation! test double point and etc: ?, . and :"
+>>> text_indentation(text)
+test blank line?
+<BLANKLINE>
+test! interrogant symbol..
+<BLANKLINE>
+test other symbols:
+<BLANKLINE>
+?
+<BLANKLINE>
+, .
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text = 1234
+>>> text_indentation(text)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text = "some text"
+>>> text_indentation(text)
+some text
+
+>>> text = "symbols and spaces.?:.?     test."
+>>> text_indentation(text)
+symbols and spaces.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+test.
+<BLANKLINE>
+
+>>> text_indentation("   ")
+>>> text_indentation("")
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
