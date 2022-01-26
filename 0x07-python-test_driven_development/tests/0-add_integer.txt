@@ -6,27 +6,25 @@ checking for both values be float
 
 check case + string
 >>> add_integer(1, "2")
-Traceback (most recent call last)
+Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
 check integer float
 >>> add_integer(1, 2.0)
 3
+
 check float integer
 >>> add_integer(2.0, 1)
 3
+
 check both integers
 >>> add_integer(1, 1)
 2
 
 check type
->>> type(add_integer(2.0, 1))
-<class 'int'>
-
-check type 
->>> type(add_integer(2.0, 2.0))
-<class int>
+>>> (add_integer(2.0, 1))
+3
 
 check wrong values for a
 >>> add_integer("j", 1)
@@ -36,9 +34,9 @@ TypeError: a must be an integer
 
 check wrong values for b
 >>> add_integer(1, "j")
-Traceback (most recentcall last):
+Traceback (most recent call last):
     ...
-TypeError: b must be a integer
+TypeError: b must be an integer
 
 check negatives values
 >>> add_integer(-1, -1)
@@ -46,12 +44,10 @@ check negatives values
 
 check for only one value
 >>> add_integer(1)
-Traceback (most recent call last):
-    ...
-TypeError: add_integer() miss one requiered argument in position "b"
+99
 
 check for empty
 >>> add_integer()
-Traceback (most recent call):
+Traceback (most recent call last):
     ...
-TypeError: add_integer() miss 2 args require to args "a" and "b"
+TypeError: add_integer() missing 1 required positional argument: 'a'
