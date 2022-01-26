@@ -5,20 +5,20 @@
 def text_indentation(text):
     '''comment'''
     buff = ""
-    if not isintance(text, str):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
     for letra in text:
         buff += letra
         if letra == "." or letra == "?" or letra == ":":
-            while buff[0] ==" ":
+            while buff[0] == " ":
                 buff = buff[1:]
                 print(buff)
                 print()
                 buff = ""
-        if len(buff) is not 0:
+        if len(buff) != 0:
             try:
                 while buff[0] == " ":
                     buff = buff[1:]
             except:
                 pass
-            print(buff)
+            print(buff, end="")
