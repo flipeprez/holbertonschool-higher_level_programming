@@ -1,45 +1,49 @@
 >>> text_indentation = __import__("5-text_indentation").text_indentation
 
->>> text="test question mark? test exclamation! test double point and etc: ?, . and :"
+>>> text="test for test? ok! test for: ?, . and :"
 >>> text_indentation(text)
-test blank line?
+test for test?
 <BLANKLINE>
-test! interrogant symbol..
+ok!
 <BLANKLINE>
-test other symbols:
+test for:
 <BLANKLINE>
 ?
 <BLANKLINE>
 , .
 <BLANKLINE>
-:
+and :
 <BLANKLINE>
 
->>> text = 1234
+>>> text = 1.0
 >>> text_indentation(text)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
 
->>> text = "some text"
+>>> text = "test"
 >>> text_indentation(text)
-some text
+test
 
->>> text = "symbols and spaces.?:.?     test."
+>>> text = "o.?: g.?     test"
 >>> text_indentation(text)
-symbols and spaces.
+o.
 <BLANKLINE>
 ?
 <BLANKLINE>
 :
 <BLANKLINE>
-.
+g.
 <BLANKLINE>
 ?
 <BLANKLINE>
-test.
+test
 <BLANKLINE>
 
+>>> text_indentation(".test")
+.
+<BLANKLINE>
+test
 >>> text_indentation("   ")
 >>> text_indentation("")
 >>> text_indentation()
