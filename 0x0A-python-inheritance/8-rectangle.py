@@ -1,24 +1,12 @@
 #!/usr/bin/python3
-'''def class'''
+'''def mod'''
 
 
-class BaseGeometry:
-    '''def subclass'''
-    def area(self):
-        '''comment'''
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        '''def validator'''
-        if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     '''def class'''
-
     def __init__(self, width, height):
         '''comment'''
         self.integer_validator("width", width)
