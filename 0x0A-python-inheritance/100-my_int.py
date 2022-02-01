@@ -2,7 +2,7 @@
 '''def class'''
 
 
-class Myint(int):
+class MyInt(int):
     '''coment'''
 
     def __init__(self, number):
