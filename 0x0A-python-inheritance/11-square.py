@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+'''comment'''
 
 Rectangle = __import__('9-rectangle').Rectangle
 '''comment'''
