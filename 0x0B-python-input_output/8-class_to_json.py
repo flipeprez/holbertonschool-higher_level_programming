@@ -1,4 +1,4 @@
-#!/usr/biin/python3
+#!/usr/bin/python3
 '''comment'''
 
 
