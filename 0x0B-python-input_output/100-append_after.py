@@ -4,7 +4,7 @@
 
 def appened_after(filename="", search_string="", new_string=""):
     '''comment'''
-    with open(filename) as f:
+    with open(filename, encoding='utf-8') as f:
         aux = ""
         for line in f:
             aux += linea
