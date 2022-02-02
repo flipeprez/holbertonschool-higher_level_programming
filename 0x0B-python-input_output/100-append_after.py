@@ -6,7 +6,7 @@ def appened_after(filename="", search_string="", new_string=""):
     '''comment'''
     with open(filename, 'r+', encoding='utf-8') as f:
         aux = ""
-        for line in f:
+        for linea in f:
             aux += linea
             if search_string in linea:
                 aux += new_string
