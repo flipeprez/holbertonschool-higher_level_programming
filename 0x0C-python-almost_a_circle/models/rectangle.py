@@ -34,12 +34,16 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
 - {self.__width}/{self.__height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''def update method'''
         attr={0:"id", 1:"width", 2:"height", 3:"x", 4:"y"}
-        if len(args) < 5:
-            for i in range(len(args)):
-                setattr(self, attr[i], args[i])
+        if args:
+            if len(args) < 5:
+                for i in range(len(args)):
+                    setattr(self, attr[i], args[i])
+        else:
+            for k in kwargs:
+                setattr(self, k, kwargs[k])
 
     @property
     def width(self):
