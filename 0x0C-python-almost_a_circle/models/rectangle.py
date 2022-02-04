@@ -45,6 +45,10 @@ class Rectangle(Base):
             for k in kwargs:
                 setattr(self, k, kwargs[k])
 
+    def to_dictionary(self):
+        '''dictionary method'''
+        return self.__dict__
+
     @property
     def width(self):
         '''def width property'''
