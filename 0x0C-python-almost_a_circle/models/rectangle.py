@@ -47,11 +47,6 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         '''dictionary method'''
-        return self.__dict__
-
-    @property
-    def width(self):
-        '''def width property'''
         my_dict = {
                 'x' = self.x,
                 'y' = self.y,
@@ -59,6 +54,11 @@ class Rectangle(Base):
                 'height' = self.height,
                 'id' = self.id
         }
+	return self.__dict__
+
+    @property
+    def width(self):
+        '''def width property'''
         return self.__width
 
     @width.setter
