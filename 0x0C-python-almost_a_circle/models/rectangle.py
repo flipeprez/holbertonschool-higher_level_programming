@@ -22,10 +22,10 @@ class Rectangle(Base):
     def display(self):
         '''print area'''
         stry = "\n" * self.y
-        print(stry, end= "")
+        print(stry, end="")
         for i in range(self.height):
-            strx= " " * self.x
-            print (strx, end="")
+            strx = " " * self.x
+            print(strx, end="")
             strwidth = "#" * self.width
             print(strwidth)
 
@@ -36,7 +36,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         '''def update method'''
-        attr={0:"id", 1:"width", 2:"height", 3:"x", 4:"y"}
+        attr = {0: "id", 1: "width", 2: "height", 3: "x", 4: "y"}
         if args:
             if len(args) < 5:
                 for i in range(len(args)):
