@@ -47,14 +47,14 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         '''dictionary method'''
-        my_dict = {
+        dictionary = {
                 'x' = self.x,
                 'y' = self.y,
                 'width' = self.width,
                 'height' = self.height,
                 'id' = self.id
         }
-	return self.__dict__
+	return dictionary
 
     @property
     def width(self):
