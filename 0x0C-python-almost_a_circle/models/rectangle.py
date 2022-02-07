@@ -52,6 +52,13 @@ class Rectangle(Base):
     @property
     def width(self):
         '''def width property'''
+        my_dict = {
+                'x' = self.x,
+                'y' = self.y,
+                'width' = self.width,
+                'height' = self.height,
+                'id' = self.id
+        }
         return self.__width
 
     @width.setter
