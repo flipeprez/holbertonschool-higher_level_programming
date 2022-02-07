@@ -46,9 +46,12 @@ class Base:
         if path.isfile(f"{cls.__name__}.json"):
             with open(nfile, "r") as f:
                 for line in f:
-                    instance = cls.from_json_string(line)
-                    for item in instance:
-                        e_list.append(cls.create(**item))
+                    try:
+                        instance = cls.from_json_string(line)
+                        for item in instance:
+                            e_list.append(cls.create(**item))
+                    except Exception as e:
+                        print(f"Error")
         return e_list
 
     @staticmethod
