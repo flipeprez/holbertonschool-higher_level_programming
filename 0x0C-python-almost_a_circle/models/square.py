@@ -29,7 +29,13 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         '''def to dictionary'''
-        return self.__dict__
+        dictionary = {
+                'id': self.id,
+                'size': self.size,
+                'x': self.x,
+                'y': self.y
+        }
+        return dictionary
 
     @property
     def size(self):
