@@ -38,7 +38,7 @@ class Rectangle(Base):
         '''def update method'''
         attr = {0: "id", 1: "width", 2: "height", 3: "x", 4: "y"}
         if args:
-            if len(args) < 5:
+            if len(args) < 6:
                 for i in range(len(args)):
                     setattr(self, attr[i], args[i])
         else:
