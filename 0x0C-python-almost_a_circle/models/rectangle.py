@@ -32,7 +32,7 @@ class Rectangle(Base):
     def __str__(self):
         '''def str'''
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
-- {self.__width}/{self.__height}"
+ - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
         '''def update method'''
