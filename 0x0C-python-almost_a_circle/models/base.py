@@ -30,11 +30,26 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        from models.rectangle import Rectangle
-        if cls.__name__ == "rectangle":
-            r1 = Rectangle(10, 7, 2, 8)
-            return r1
-    
+        '''def create method'''
+        if cls.__name__ == "Rectangle":
+            r1 = cls(6, 7)
+        elif cls.__name__ == "Square":
+            r1 = cls(8)
+        r1.update(**dictionary)
+        return r1
+
+    @classmethod
+    def load_from_file(cls):
+        '''def fun load from file'''
+        e_list = []
+        nfile = f"{cls.__name__}.json"
+        with open(nfile, "r") as f:
+            for line in f:
+                instance = cls.from_json_string(line)
+                for item in instance:
+                    e_list.append(cls.create(**item))
+            return e_list
+
     @staticmethod
     def to_json_string(list_dictionaries):
         if list_dictionaries is None:
@@ -45,6 +60,6 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         if json_string is None:
-            return "[]"
+            return ([])
         else:
-            return json.dumps(json_string)
+            return json.loads(json_string)
