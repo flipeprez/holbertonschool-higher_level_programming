@@ -43,12 +43,13 @@ class Base:
         '''def fun load from file'''
         e_list = []
         nfile = f"{cls.__name__}.json"
-        with open(nfile, "r") as f:
-            for line in f:
-                instance = cls.from_json_string(line)
-                for item in instance:
-                    e_list.append(cls.create(**item))
-            return e_list
+        if path.isfile(f"{cls.__name__}.json"):
+            with open(nfile, "r") as f:
+                for line in f:
+                    instance = cls.from_json_string(line)
+                    for item in instance:
+                        e_list.append(cls.create(**item))
+        return e_list
 
     @staticmethod
     def to_json_string(list_dictionaries):
