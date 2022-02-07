@@ -87,7 +87,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         if x is not type(int):
-            TypeError("x must be an integer")
+             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
         else:
@@ -102,7 +102,7 @@ class Rectangle(Base):
     def y(self, y):
         '''def y setter'''
         if y is not type(int):
-            TypeError("y must be an integer")
+            raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
         else:
