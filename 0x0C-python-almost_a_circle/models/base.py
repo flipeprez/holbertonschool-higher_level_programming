@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''def class'''
 import json
-
+from os import path
 
 class Base:
     '''def class attribute'''
