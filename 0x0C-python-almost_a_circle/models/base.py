@@ -76,7 +76,7 @@ class Base:
         fname = cls.__name__ + ".csv"
 
         with open(fname, 'w', newline= '') as csvfile:
-            writesom = csv.writer(csvfile, delimeter=" ")
+            writesom = csv.writer(csvfile, delimiter=" ")
 
             if cls.__name__ == "Rectangle":
                 for item in list_objs:
