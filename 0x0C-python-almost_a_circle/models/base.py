@@ -2,6 +2,7 @@
 '''def class'''
 import json
 from os import path
+import csv
 
 
 class Base:
@@ -68,3 +69,33 @@ class Base:
             return ([])
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''csv method'''
+        fname = cls.__name__ + ".csv"
+
+        with open(fname, 'w', newline= '') as csvfile:
+            writesom = csv.writer(csvfile, delimeter=" ")
+
+            if cls.__name__ == "Rectangle":
+                for item in list_objs:
+                    string = " "
+                    item = item.to_dictionary()
+                    string += (str(item["id"]) + "," +
+                            str(item["size"]) + "," +
+                            str(item["x"]) + "," + str(item["y"]))
+                    writesom.writerow(string)
+            if cls.__name__ == "Square":
+                for item in list_objs:
+                    string = ""
+                    item = item.to_dictionary()
+                    string += (str(item["id"]) + "," +
+                            str(item["size"]) + "," +
+                            str(item["x"]) + "," + str(item["y"]))
+                    writesom.writerow(string)
+    
+    @classmethod
+    def load_from_file_csv(cls):
+        '''method for csv'''
+        return []
