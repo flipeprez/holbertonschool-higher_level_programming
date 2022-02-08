@@ -83,7 +83,8 @@ class Base:
                     string = " "
                     item = item.to_dictionary()
                     string += (str(item["id"]) + "," +
-                            str(item["size"]) + "," +
+                            str(item["width"]) + "," +
+                            str(item["height"]) + "," +
                             str(item["x"]) + "," + str(item["y"]))
                     writesom.writerow(string)
             if cls.__name__ == "Square":
