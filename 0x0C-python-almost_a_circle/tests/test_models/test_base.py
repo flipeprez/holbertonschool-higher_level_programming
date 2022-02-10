@@ -1,35 +1,37 @@
 #!/usr/bin/python3
 '''module test'''
-import unnitest
+import unittest
 from models.base import Base
 from models.square import Square
 import json
 
 
-class testing_for_base(unitest, TestCase):
+class TestForFase(unittest.TestCase):
     '''testing for base class'''
 
     def test_id_none(self):
         '''test no id'''
-    a = Base()
-    self.assertEqual(1, a.id)
-    b = Base()
-    self.assertEqual(2, b.id)
-
+        b = Base()
+        print(b.id)
+        self.assertEqual(b.id, 1)
+        b = Base()
+        self.assertEqual(b.id, 2)
+        print(b.id)
+    
     def test_id(self):
         '''giving a id'''
-    b = Base(33)
-    self.assertEqual(33, c.id)
+        b = Base(33)
+        self.assertEqual(33, b.id)
 
     def test_id_0(self):
         '''givin 0 like id'''
-    b = Base(0)
-    self.accertEqual(0, b.id)
+        b = Base(0)
+        self.assertEqual(0, b.id)
 
     def test_negative(self):
         '''giving a negative'''
-    b = Base(-14)
-    self.assertEqual(-54, b.id,)
+        b = Base(-14)
+        self.assertEqual(-14, b.id,)
 
     def test_for_string_id(self):
         '''givining not int to id'''
@@ -38,18 +40,19 @@ class testing_for_base(unitest, TestCase):
 
     def test_giving_list(self):
         '''giving a list for id'''
-        b = Base([1, 2, 3], b.id)
+        b = Base([1, 2, 3])
+        self.assertEqual(b.id, [1, 2, 3])
 
     def giving_dict_id(self):
         '''giving a dict for id'''
         b = base({'id': 321})
-        self.accertEqual({'id': 321})
+        self.assertEqual({'id': 321})
 
     def test_json_type(self):
         '''test json string'''
         S = Square(1)
         jdic = S.to_dictionary()
-        jstr = Base.to_json_string([jdict])
+        jstr = Base.to_json_string([jdic])
         self.assertEqual(type(jstr), str)
 
     def test_json_value(self):
@@ -61,7 +64,7 @@ class testing_for_base(unitest, TestCase):
 
     def tests_json_empty(self):
         '''test json str'''
-    S = Square(1, 0, 0, 545)
-    jdic = S.to_dictionary()
-    jstr = Base.to_json_string([])
-    self.assertEqual(jstr, "[]")
+        S = Square(1, 0, 0, 545)
+        jdic = S.to_dictionary()
+        jstr = Base.to_json_string([])
+        self.assertEqual(jstr, "[]")
