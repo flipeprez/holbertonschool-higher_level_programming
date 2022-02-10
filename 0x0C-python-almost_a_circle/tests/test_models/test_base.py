@@ -12,11 +12,9 @@ class TestForFase(unittest.TestCase):
     def test_id_none(self):
         '''test no id'''
         b = Base()
-        print(b.id)
         self.assertEqual(b.id, 1)
         b = Base()
         self.assertEqual(b.id, 2)
-        print(b.id)
     
     def test_id(self):
         '''giving a id'''
