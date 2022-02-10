@@ -66,3 +66,45 @@ class test_rectangle(unittest.TestCase):
         '''Test different type  than int'''
         with self.assertRaises(TypeError):
             rect = Rectangle(1, "5")
+
+    def test_height_bool(self):
+        '''test different type than int'''
+        with self.assertRaises(TypeError):
+            rect = Rectangle(1, True)
+
+    def test_height_list(self):
+        '''testdifferent type than int'''
+        with self.assertRaises(TypeError):
+            rect = Rectangle(1, [7, 8])
+
+    def test_x_string(self):
+        '''test different type than int'''
+        with self.assertRaises(TypeError):
+            rect = Rectangle(1, "33")
+
+    def test_x_bool(self):
+        '''test different type than int'''
+        with self.assertRaises(TypeError):
+            rect = Rectangle(2, True)
+
+    def test_x_list(self):
+        '''test different types than int'''
+        with self.assertRaises(TypeError):
+            rect = Rectangle(3, [8, 9])
+
+    def test_y_str(self):
+        '''test different types than int'''
+        with self.assertRaises(TypeError):
+            rect = Rectangle(4, "33")
+
+    def test_y_bool(self):
+        '''test different types than int'''
+        with self.assertRaises(TypeError):
+            rect = Rectangle(1, True)
+
+    def test_y_list(self):
+        '''test different types than int'''
+        with self.assertRaises(TypeError):
+            rect = Rectangle(2, [7, 8])
+
+    
