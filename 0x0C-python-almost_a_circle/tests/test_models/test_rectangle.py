@@ -80,31 +80,31 @@ class test_rectangle(unittest.TestCase):
     def test_x_string(self):
         '''test different type than int'''
         with self.assertRaises(TypeError):
-            rect = Rectangle(1, "33")
+            rect = Rectangle(1, 2, "33")
 
     def test_x_bool(self):
         '''test different type than int'''
         with self.assertRaises(TypeError):
-            rect = Rectangle(2, True)
+            rect = Rectangle(2, 3, True)
 
     def test_x_list(self):
         '''test different types than int'''
         with self.assertRaises(TypeError):
-            rect = Rectangle(3, [8, 9])
+            rect = Rectangle(3, 4, [8, 9])
 
     def test_y_str(self):
         '''test different types than int'''
         with self.assertRaises(TypeError):
-            rect = Rectangle(4, "33")
+            rect = Rectangle(4, 2, 3, "33")
 
     def test_y_bool(self):
         '''test different types than int'''
         with self.assertRaises(TypeError):
-            rect = Rectangle(1, True)
+            rect = Rectangle(1, 2, 3, True)
 
     def test_y_list(self):
         '''test different types than int'''
         with self.assertRaises(TypeError):
-            rect = Rectangle(2, [7, 8])
+            rect = Rectangle(2, 3, 4, [7, 8])
 
     
