@@ -50,19 +50,19 @@ class TestForFase(unittest.TestCase):
         '''test json string'''
         S = square(1)
         jdic = b.to_dictionary()
-        jstr = Base.to_json_string([jdic])
+        jstr = base.to_json_string([jdic])
         self.assertEqual(type(jstr), str)
 
     def test_json_value(self):
         '''test json str'''
         S = square(1, 0, 0, 545)
         jdic = S.to_dictionary()
-        jstr = Base.to_json_string(None)
+        jstr = base.to_json_string(None)
         self.assertEqual(jstr, "[]")
 
     def tests_json_empty(self):
         '''test json str'''
         S = square(1, 0, 0, 545)
         jdic = S.to_dictionary()
-        jstr = Base.to_json_string([])
+        jstr = base.to_json_string([])
         self.assertEqual(jstr, "[]")
