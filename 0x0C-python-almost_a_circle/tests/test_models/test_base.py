@@ -48,21 +48,21 @@ class TestForFase(unittest.TestCase):
 
     def test_json_type(self):
         '''test json string'''
-        S = square(1)
+        S = Square(1)
         jdic = S.to_dictionary()
-        jstr = base.to_json_string([jdic])
+        jstr = Base.to_json_string([jdic])
         self.assertEqual(type(jstr), str)
 
     def test_json_value(self):
         '''test json str'''
-        S = square(1, 0, 0, 545)
+        S = Square(1, 0, 0, 545)
         jdic = S.to_dictionary()
-        jstr = base.to_json_string(None)
+        jstr = Base.to_json_string(None)
         self.assertEqual(jstr, "[]")
 
     def tests_json_empty(self):
         '''test json str'''
-        S = square(1, 0, 0, 545)
+        S = Square(1, 0, 0, 545)
         jdic = S.to_dictionary()
-        jstr = base.to_json_string([])
+        jstr = Base.to_json_string([])
         self.assertEqual(jstr, "[]")
