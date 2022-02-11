@@ -65,4 +65,4 @@ class TestForFase(unittest.TestCase):
         S = Square(1, 0, 0, 545)
         jdic = S.to_dictionary()
         jstr = Base.to_json_string([])
-        self.assertEqual(jstr, "[]")
+        self.assertEqual(jstr, "")
