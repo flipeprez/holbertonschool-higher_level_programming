@@ -18,8 +18,8 @@ class TestForFase(unittest.TestCase):
     
     def test_id(self):
         '''giving a id'''
-        b = Base(33)
-        self.assertEqual(33, b.id)
+        b = Base(89)
+        self.assertEqual(89, b.id)
 
     def test_id_0(self):
         '''givin 0 like id'''
