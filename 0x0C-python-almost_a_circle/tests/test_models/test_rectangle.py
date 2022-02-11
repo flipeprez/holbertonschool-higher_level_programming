@@ -128,25 +128,31 @@ class test_rectangle(unittest.TestCase):
             rect = Rectangle(3, 5, 7, -3)
 
     def test_width_zero(self):
+        '''test width with zero'''
         with self.assertRaises(ValueError):
             rect = Rectangle(0, 8)
 
     def test_height_zero(self):
+        '''test height with zero'''
         with self.assertRaises(ValueError):
             rect = Rectangle(7, 0)
 
     def test_width_float(self):
+        '''test width with float'''
         with self.assertRaises(TypeError):
             rect = Rectangle(1.02, 6)
 
     def test_height_float(self):
+        '''test height with zero'''
         with self.assertRaises(TypeError):
             rect = Rectangle(5, 7.09)
 
     def test_x_float(self):
+        '''test x xith float'''
         with self.assertRaises(TypeError):
             rect = Rectangle(5, 6, 7.89)
 
     def test_y_float(self):
+        '''test y with float'''
         with self.assertRaises(TypeError):
             rect = Rectangle(5, 6, 7, 8.99)
