@@ -49,7 +49,7 @@ class TestForFase(unittest.TestCase):
     def test_json_type(self):
         '''test json string'''
         S = square(1)
-        jdic = b.to_dictionary()
+        jdic = S.to_dictionary()
         jstr = base.to_json_string([jdic])
         self.assertEqual(type(jstr), str)
 
