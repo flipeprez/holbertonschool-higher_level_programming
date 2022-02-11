@@ -156,3 +156,8 @@ class test_rectangle(unittest.TestCase):
         '''test y with float'''
         with self.assertRaises(TypeError):
             rect = Rectangle(5, 6, 7, 8.99)
+
+    def area(self):
+        self.assertEqual(self.r.area(), 7 * 10)
+        rect = Rectagle(3, 4, 5 ,5, 7)
+        self.assertEqual(rect.area(), 3 * 4)
