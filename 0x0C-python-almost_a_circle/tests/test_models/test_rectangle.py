@@ -134,3 +134,19 @@ class test_rectangle(unittest.TestCase):
     def test_height_zero(self):
         with self.assertRaises(ValueError):
             rect = Rectangle(7, 0)
+
+    def test_width_float(self):
+        with self.assertRaises(TypeError):
+            rect = Rectangle(1.02, 6)
+
+    def test_height_float(self):
+        with self.assertRaises(TypeError):
+            rect = Rectangle(5, 7.09)
+
+    def test_x_float(self):
+        with self.assertRaises(TypeError):
+            rect = Rectangle(5, 6, 7.89)
+
+    def test_y_float(self):
+        with self.assertRaises(TypeError):
+            rect = Rectangle(5, 6, 7, 8.99)
