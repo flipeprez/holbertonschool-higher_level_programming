@@ -43,26 +43,26 @@ class TestForFase(unittest.TestCase):
 
     def giving_dict_id(self):
         '''giving a dict for id'''
-        b = base({'id': 321})
+        b = Base({'id': 321})
         self.assertEqual({'id': 321})
 
     def test_json_type(self):
         '''test json string'''
-        S = Square(1)
-        jdic = S.to_dictionary()
+        b = Base(1)
+        jdic = b.to_dictionary()
         jstr = Base.to_json_string([jdic])
         self.assertEqual(type(jstr), str)
 
     def test_json_value(self):
         '''test json str'''
-        S = Square(1, 0, 0, 545)
-        jdic = S.to_dictionary()
+        b = Base(1, 0, 0, 545)
+        jdic = b.to_dictionary()
         jstr = Base.to_json_string(None)
         self.assertEqual(jstr, "[]")
 
     def tests_json_empty(self):
         '''test json str'''
-        S = Square(1, 0, 0, 545)
-        jdic = S.to_dictionary()
+        b = Base(1, 0, 0, 545)
+        jdic = b.to_dictionary()
         jstr = Base.to_json_string([])
         self.assertEqual(jstr, "[]")
