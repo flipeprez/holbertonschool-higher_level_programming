@@ -116,3 +116,21 @@ class test_rectangle(unittest.TestCase):
         '''test height with negatives'''
         with self.assertRaises(ValueError):
             rect = Rectangle(-3, 5)
+
+    def test_x_negative(self):
+        '''test x with negatives'''
+        with self.assertRaises(ValueError):
+            rect = Rectangle(2, 4, -5)
+
+    def test_y_negative(self):
+        '''test y with negative'''
+        with self.assertRaises(ValueError):
+            rect = Rectangle(3, 5, 7, -3)
+
+    def test_width_zero(self):
+        with self.assertRaises(ValueError):
+            rect = Rectangle(0, 8)
+
+    def test_height_zero(self):
+        with self.assertRaises(ValueError):
+            rect = Rectangle(7, 0)
