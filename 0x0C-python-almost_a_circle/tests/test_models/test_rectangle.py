@@ -159,8 +159,8 @@ class test_rectangle(unittest.TestCase):
 
     def area(self):
         '''test area'''
-        self.assertEqual(self.r.area(), 7 * 10)
-        rect = Rectagle(3, 4, 5 ,5, 7)
+        self.assertEqual(self.r.area(), 3 * 4)
+        rect = Rectangle(3, 4, 5 ,5, 7)
         self.assertEqual(rect.area(), 3 * 4)
 
     def str_for_rec(self):
