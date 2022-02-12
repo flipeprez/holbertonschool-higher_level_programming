@@ -157,13 +157,13 @@ class test_rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect = Rectangle(5, 6, 7, 8.99)
 
-    def area(self):
+    def test_area(self):
         '''test area'''
-        self.assertEqual(self.r.area(), 3 * 4)
-        rect = Rectangle(3, 4, 5 ,5, 7)
-        self.assertEqual(rect.area(), 3 * 4)
+        self.assertEqual(self.r.area(), 5 * 10)
+        rect = Rectangle(3, 9, 8, 8, 2)
+        self.assertEqual(rect.area(), 3 * 9)
 
-    def str_for_rec(self):
+    def test_str_for_rec(self):
         '''test str for rec'''
-        r = Rectangle(5, 9, 7, 4, 22)
-        self.assertEqual(r.__str__(), "[Rectangle] (22) 7/4 - 5/9")
+        r = Rectangle(5, 9, 7, 4, 88)
+        self.assertEqual(r.__str__(), "[Rectangle] (88) 7/4 - 5/9")
