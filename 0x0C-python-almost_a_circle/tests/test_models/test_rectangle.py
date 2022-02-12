@@ -167,3 +167,27 @@ class test_rectangle(unittest.TestCase):
         '''test str for rec'''
         r = Rectangle(5, 9, 7, 4, 88)
         self.assertEqual(r.__str__(), "[Rectangle] (88) 7/4 - 5/9")
+
+    def test_update(self):
+        '''test update method'''
+        self.r.update(23)
+        self.assertEqual(23, self.r.id)
+
+    def test_update_width(self):
+        '''test update width'''
+        self.r.update(23, 45)
+        self.assertEqual(45, self.r.width)
+
+    def test_update_height(self):
+        '''test update height'''
+        self.r.update(23, 45, 24)
+        self.assertEqual(24, self.r.height)
+
+    def test_update_x(self):
+        self.r.update(23, 45, 24, 6)
+        self.assertEqual(6, self.r.x)
+
+    def test_update_y(self):
+        self.r.update(23, 45, 24, 6, 9)
+        self.assertEqual(9, self.r.y)
+
