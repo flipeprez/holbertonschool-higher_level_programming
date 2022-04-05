@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let list = process.argv[2];
+const list = process.argv[2];
 
 if (isNaN(list)) {
   console.log('Missing size');
@@ -10,5 +10,5 @@ if (isNaN(list)) {
 	    show = show + 'X';
 	  }
 	  console.log(show);
-        }
   }
+}
