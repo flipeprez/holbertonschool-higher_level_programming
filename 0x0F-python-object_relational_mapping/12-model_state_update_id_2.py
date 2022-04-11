@@ -13,8 +13,6 @@ if __name__ == "__main__":
                         pool_pre_ping=True)
     Session = sessionmaker(bind=eng)
     session = Session()
-    state_to_add = State(name="Louisiana")
-    session.add(state_to_add)
+    query = session.query(State).filter_by(id=2).first()
+    query.name = "New Mexico"
     session.commit()
-    obj = session.query(State).filter_by(name="Louisiana").first()
-    print(obj.id)
