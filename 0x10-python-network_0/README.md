@@ -1,1 +1,1 @@
-readme for ex 
+readme for exs
