@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''comment'''
 from urllib.request import Request, urlopen
 ''' comment '''
 if __name__ == "__main__":
