@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''comment'''
 
+
 def find_peak(nums):
     '''
         Finds the pick in a list of numbers
@@ -17,7 +18,7 @@ def find_peak(nums):
         value = nums[idx]
         if (idx > 0 and idx < length - 1 and
                 nums[idx + 1] <= value and nums[idx - 1] <= value):
-                return value
+            return value
         elif idx == 0 and nums[idx + 1] <= value:
             return value
         elif idx == length - 1 and nums[idx - 1] <= value:
