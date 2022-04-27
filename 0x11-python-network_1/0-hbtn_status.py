@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+'''comment'''
 from urllib.request import Request, urlopen
-
+''' comment '''
 if __name__ == "__main__":
+    '''comment'''
     url = "https://intranet.hbtn.io/status"
     req = Request(url)
     with urlopen(req) as response:
