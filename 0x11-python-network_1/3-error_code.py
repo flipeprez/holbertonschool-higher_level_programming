@@ -6,7 +6,7 @@ from sys import argv
 
 if __name__ == "__main__":
     '''comment'''
-    url = argv [1]
+    url = argv[1]
     try:
         with urllib.request.urlopen(url) as response:
             page = response.read()

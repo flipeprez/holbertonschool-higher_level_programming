@@ -5,7 +5,7 @@ from sys import argv
 ''' comment '''
 if __name__ == "__main__":
     '''comment'''
-    email = argv [2]
+    email = argv[2]
     my_email_dict = {
     "email": email
 }
